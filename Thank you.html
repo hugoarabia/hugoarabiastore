@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="rainbow">
+    	<p>Thank you for purchasing!</p>
+		<p>Your package will be delivered in 6 days</p>
+		<p>-Hugo's Store</p>
+<a href="index.html" class="Continue">Continue &raquo;</a>
+<a href="#" class="Continue">&#8250;</a>
+<p><a href="payment.html" class="previous">&laquo; Return</a></p>
+</div>
+</body>
+</html>
+
+<style>
+  body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.rainbow {
+	position: fixed;
+	z-index: 0;
+	width: 400px;
+	height: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	text-align: center;
+	color: aliceblue;
+	font-size: larger
+
+	
+	
+ 
+	}
+	::before { 
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#37db0e, #33fd00), linear-gradient(#e71fa5, #ff0095), linear-gradient(#334bd5, #4b33d5), linear-gradient(#f10d06, #ff0000);
+		animation: rotate 4s linear infinite;
+	}
+	
+	::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: rgb(0, 0, 0);
+		border-radius: 5px;
+	}
+
+
+</style>
